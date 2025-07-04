@@ -22,7 +22,7 @@ import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { APP_ROUTES } from './app/app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { IPostsRepository } from './app/Modules/Posts/Posts.Domain/Posts.IRepository/IPostsRepository';
 import { PostsRepository } from './app/Modules/Posts/Posts.Data/Posts.Repository/PostsRepository';
 import { ISettingsRepository } from './app/Modules/Settings/Settings.Domain/Settings.IRepository/ISettingsRepository';
