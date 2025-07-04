@@ -35,7 +35,6 @@
     "ckeditor5-build-classic-simple-upload-adapter-image-resize": "^1.0.4",
     "material-icons-font": "^2.1.0",
     "net": "^1.0.2",
-    "primeng": "^17.3.1",
     "rxjs": "~7.8.0",
     "sockjs-client": "^1.6.1",
     "stompjs": "^2.3.3",
