@@ -19,26 +19,22 @@ import { AuthViewModel } from 'src/app/Modules/Auth/Auth.Presentation/Auth.ViewM
 
 
 @Component({
-
-
-  selector: 'app-post-data',
-  templateUrl: './post-data.component.html',
-  styleUrls: ['./post-data.component.css'],
-  standalone: true,
-  imports: [
-    FormsModule,
-    CommonModule,
-    CKEditorModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatCardModule,
-    MatButtonToggleModule,
-
-  ],
+    selector: 'app-post-data',
+    templateUrl: './post-data.component.html',
+    styleUrls: ['./post-data.component.css'],
+    imports: [
+        FormsModule,
+        CommonModule,
+        CKEditorModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatCardModule,
+        MatButtonToggleModule,
+    ]
 })
 export class PostDataComponent implements OnInit {
 

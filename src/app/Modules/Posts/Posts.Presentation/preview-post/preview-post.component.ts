@@ -6,12 +6,11 @@ import { PostsViewModel } from '../Posts.ViewModels/PostsViewModel';
 
 
 @Component({
-//  encapsulation: ViewEncapsulation.Emulated,
-  selector: 'app-preview-post',
-  templateUrl: './preview-post.component.html',
-  styleUrls: ['./preview-post.component.css'],
-  standalone:true,
-  imports:[CommonModule,]
+    //  encapsulation: ViewEncapsulation.Emulated,
+    selector: 'app-preview-post',
+    templateUrl: './preview-post.component.html',
+    styleUrls: ['./preview-post.component.css'],
+    imports: [CommonModule,]
 })
 export class PreviewPostComponent implements OnInit {
 

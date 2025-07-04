@@ -9,22 +9,20 @@ import { User } from '../../User.Domain/User.Models/User';
 import { UserViewModel } from '../user-view-models/user-view-models';
 import {MatSelectModule} from '@angular/material/select';
 @Component({
-  selector: 'app-user-dialog',
-  templateUrl: './user-dialog.component.html',
-  styleUrls: ['./user-dialog.component.css'],
-  standalone:true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSelectModule,
-
-  ],
+    selector: 'app-user-dialog',
+    templateUrl: './user-dialog.component.html',
+    styleUrls: ['./user-dialog.component.css'],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSelectModule,
+    ]
 })
 export class UserDialogComponent implements OnInit {
 

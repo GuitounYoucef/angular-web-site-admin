@@ -13,21 +13,20 @@ import { UserDialogComponent } from '../user-dialog/user-dialog.component';
 
 
 @Component({
-  selector: 'user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css'],
-  standalone:true,
-  imports:[
-    CommonModule,
-    NgFor,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatDialogModule,
-   ]
+    selector: 'user',
+    templateUrl: './user.component.html',
+    styleUrls: ['./user.component.css'],
+    imports: [
+        CommonModule,
+        NgFor,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatDialogModule,
+    ]
 })
 export class UserComponent implements OnInit {
   displayedColumns: string[] = ['userName','role','accountStatus','actions'];

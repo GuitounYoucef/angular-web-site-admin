@@ -8,19 +8,18 @@ import { MatDialog } from '@angular/material/dialog';
 import { MemberDialogComponent } from '../member-dialog/member-dialog.component';
 
 @Component({
-  selector: 'app-list-team',
-  templateUrl: './list-team.component.html',
-  styleUrls: ['./list-team.component.css'],
-  standalone: true,
-  imports: [CommonModule,
-            NgIf,
-            NgFor,
-            RouterOutlet,
-            RouterLink,
-            RouterLinkActive,
-            MatIconModule,
-            MemberCardComponent
-            ]            
+    selector: 'app-list-team',
+    templateUrl: './list-team.component.html',
+    styleUrls: ['./list-team.component.css'],
+    imports: [CommonModule,
+        NgIf,
+        NgFor,
+        RouterOutlet,
+        RouterLink,
+        RouterLinkActive,
+        MatIconModule,
+        MemberCardComponent
+    ]
 })
 
 export class ListTeamComponent implements OnInit {

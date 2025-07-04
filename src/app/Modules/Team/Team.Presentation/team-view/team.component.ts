@@ -12,22 +12,21 @@ import { ListTeamComponent } from '../list-team/list-team.component';
 
 
 @Component({
-  selector: 'team',
-  templateUrl: './team.component.html',
-  styleUrls: ['./team.component.css'],
-  standalone:true,
-  imports:[
-    CommonModule,
-    NgFor,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatDialogModule,
-    ListTeamComponent
-   ]
+    selector: 'team',
+    templateUrl: './team.component.html',
+    styleUrls: ['./team.component.css'],
+    imports: [
+        CommonModule,
+        NgFor,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatDialogModule,
+        ListTeamComponent
+    ]
 })
 export class TeamComponent implements OnInit {
 

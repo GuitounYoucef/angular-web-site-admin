@@ -12,22 +12,20 @@ import { TeamViewModel } from '../team-view-models/team-view-models';
 import { ITeamRepository } from '../../Team.Domain/Team.IRepository/ITeamRepository';
 
 @Component({
-  selector: 'app-member-dialog',
-  templateUrl: './member-dialog.component.html',
-  styleUrls: ['./member-dialog.component.css'],
-  standalone:true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSelectModule,
-
-  ],
+    selector: 'app-member-dialog',
+    templateUrl: './member-dialog.component.html',
+    styleUrls: ['./member-dialog.component.css'],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSelectModule,
+    ]
 })
 export class MemberDialogComponent implements OnInit, AfterViewInit {
 

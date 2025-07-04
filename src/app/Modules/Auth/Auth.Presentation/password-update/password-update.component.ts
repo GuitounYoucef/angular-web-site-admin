@@ -13,14 +13,13 @@ import {MatDividerModule} from '@angular/material/divider';
 
 
 @Component({
-  selector: 'app-password-update',
-  templateUrl: './password-update.component.html',
-  styleUrls: ['./password-update.component.css'],
-  standalone: true,
-  imports: [
-    FormsModule, CommonModule,  MatDividerModule,
-    ReactiveFormsModule,MatIconModule, MatButtonModule, MatInputModule, MatDialogModule
-  ],
+    selector: 'app-password-update',
+    templateUrl: './password-update.component.html',
+    styleUrls: ['./password-update.component.css'],
+    imports: [
+        FormsModule, CommonModule, MatDividerModule,
+        ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatDialogModule
+    ]
 })
 export class PasswordUpdateComponent implements OnInit {
   direction: Direction = "rtl";

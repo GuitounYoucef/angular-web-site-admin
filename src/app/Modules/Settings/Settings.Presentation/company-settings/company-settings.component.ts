@@ -11,19 +11,18 @@ import { CommonModule } from '@angular/common';
 declare const L: any;
 
 @Component({
-  selector: 'app-company-settings',
-  templateUrl: './company-settings.component.html',
-  styleUrls: ['./company-settings.component.css'],
-  standalone: true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    CommonModule,
-  ]
+    selector: 'app-company-settings',
+    templateUrl: './company-settings.component.html',
+    styleUrls: ['./company-settings.component.css'],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        CommonModule,
+    ]
 })
 export class CompanySettingsComponent implements OnInit {
   companyForm !: FormGroup;

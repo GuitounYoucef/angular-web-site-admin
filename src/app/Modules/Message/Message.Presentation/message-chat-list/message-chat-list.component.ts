@@ -12,19 +12,18 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @Component({
-  selector: 'app-message-chat-list',
-  templateUrl: './message-chat-list.component.html',
-  styleUrls: ['./message-chat-list.component.css'],
-  standalone:true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AvatarModule,
-    FormsModule,
-    CommonModule, NgIf, NgFor,
-    MatIconModule,
-    ScrollingModule,
-    MatProgressSpinnerModule
-  ],
+    selector: 'app-message-chat-list',
+    templateUrl: './message-chat-list.component.html',
+    styleUrls: ['./message-chat-list.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        AvatarModule,
+        FormsModule,
+        CommonModule, NgIf, NgFor,
+        MatIconModule,
+        ScrollingModule,
+        MatProgressSpinnerModule
+    ]
 })
 export class MessageChatListComponent implements OnInit,  AfterViewChecked, AfterViewInit , OnDestroy{
 

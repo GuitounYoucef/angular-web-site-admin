@@ -15,23 +15,22 @@ import { selectVisiteNumber } from '../Statistics.Data/Satistics.State/satistics
 import { getVisiteNumber } from '../Statistics.Data/Satistics.State/satistics.actions';
 
 @Component({
-  selector: 'app-statistics-data',
-  templateUrl: './statistics-data.component.html',
-  styleUrls: ['./statistics-data.component.css'],
-  standalone:true,
-  imports:[FormsModule,
-           CommonModule,
-           ReactiveFormsModule,
-           NgFor,
-           MatFormFieldModule,
-           MatIconModule,
-           MatButtonModule,
-           MatInputModule,
-           MatSelectModule,
-           MatTableModule,
-           MatPaginatorModule,
-           StatCardComponent
-          ]
+    selector: 'app-statistics-data',
+    templateUrl: './statistics-data.component.html',
+    styleUrls: ['./statistics-data.component.css'],
+    imports: [FormsModule,
+        CommonModule,
+        ReactiveFormsModule,
+        NgFor,
+        MatFormFieldModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTableModule,
+        MatPaginatorModule,
+        StatCardComponent
+    ]
 })
 export class StatisticsDataComponent implements OnInit {
 

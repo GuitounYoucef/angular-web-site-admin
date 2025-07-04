@@ -14,21 +14,20 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CategoriesDialogComponent } from '../categories-dialog/categories-dialog.component';
 
 @Component({
-  selector: 'app-categories-settings',
-  templateUrl: './categories-settings.component.html',
-  styleUrls: ['./categories-settings.component.css'],
-  standalone:true,
-  imports:[
-           CommonModule,
-           NgFor,
-           MatIconModule,
-           MatButtonModule,
-           MatInputModule,
-           MatSelectModule,
-           MatTableModule,
-           MatPaginatorModule,
-           MatDialogModule,
-          ]
+    selector: 'app-categories-settings',
+    templateUrl: './categories-settings.component.html',
+    styleUrls: ['./categories-settings.component.css'],
+    imports: [
+        CommonModule,
+        NgFor,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatDialogModule,
+    ]
 })
 export class CategorieSettingsComponent implements OnInit {
 

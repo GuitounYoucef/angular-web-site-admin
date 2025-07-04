@@ -8,11 +8,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { PostsViewModel } from '../Posts.ViewModels/PostsViewModel';
 
 @Component({
-  selector: 'app-list-posts',
-  templateUrl: './list-posts.component.html',
-  styleUrls: ['./list-posts.component.css'],
-  standalone: true,
-  imports: [CommonModule, NgIf, NgFor, RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatButtonModule, PostCardComponent, MatGridListModule]
+    selector: 'app-list-posts',
+    templateUrl: './list-posts.component.html',
+    styleUrls: ['./list-posts.component.css'],
+    imports: [CommonModule, NgIf, NgFor, RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatButtonModule, PostCardComponent, MatGridListModule]
 })
 export class ListPostsComponent implements OnInit {
 

@@ -15,11 +15,10 @@ import { AuthViewModel } from 'src/app/Modules/Auth/Auth.Presentation/Auth.ViewM
 
 
 @Component({
-  selector: 'app-post-card',
-  templateUrl: './post-card.component.html',
-  styleUrls: ['./post-card.component.css'],
-  standalone: true,
-  imports: [FormsModule, CommonModule, MatCardModule, MatButtonModule, MatIconModule],
+    selector: 'app-post-card',
+    templateUrl: './post-card.component.html',
+    styleUrls: ['./post-card.component.css'],
+    imports: [FormsModule, CommonModule, MatCardModule, MatButtonModule, MatIconModule]
 })
 export class PostCardComponent implements OnInit {
 

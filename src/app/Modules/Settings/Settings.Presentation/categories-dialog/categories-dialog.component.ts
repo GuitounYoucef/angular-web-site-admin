@@ -10,21 +10,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { SettingsViewModels } from '../Settings.ViewModels/SettingsViewModels';
 
 @Component({
-  selector: 'app-categories-dialog',
-  templateUrl: './categories-dialog.component.html',
-  styleUrls: ['./categories-dialog.component.css'],
-  standalone:true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-
-  ],
+    selector: 'app-categories-dialog',
+    templateUrl: './categories-dialog.component.html',
+    styleUrls: ['./categories-dialog.component.css'],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+    ]
 })
 export class CategoriesDialogComponent implements OnInit {
   categoriesForm : FormGroup;

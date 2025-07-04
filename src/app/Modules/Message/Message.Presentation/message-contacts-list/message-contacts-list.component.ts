@@ -8,16 +8,15 @@ import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-message-contacts-list',
-  templateUrl: './message-contacts-list.component.html',
-  styleUrls: ['./message-contacts-list.component.css'],
-  standalone:true,
-  imports: [
-    AvatarModule,
-    MatListModule,
-    RouterModule,
-    CommonModule, NgIf, NgFor,
-  ],
+    selector: 'app-message-contacts-list',
+    templateUrl: './message-contacts-list.component.html',
+    styleUrls: ['./message-contacts-list.component.css'],
+    imports: [
+        AvatarModule,
+        MatListModule,
+        RouterModule,
+        CommonModule, NgIf, NgFor,
+    ]
 })
 export class MessageContactsListComponent implements OnInit {
 

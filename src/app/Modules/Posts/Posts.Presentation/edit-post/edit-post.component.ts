@@ -22,13 +22,12 @@ import { PostDataComponent } from '../post-data/post-data.component';
 import { PostsViewModel } from '../Posts.ViewModels/PostsViewModel';
 
 @Component({
-  selector: 'app-edit-post',
-  templateUrl: './edit-post.component.html',
-  styleUrls: ['./edit-post.component.css'],
-  standalone: true,
-  imports: [
-
-  FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatInputModule,PostDataComponent],
+    selector: 'app-edit-post',
+    templateUrl: './edit-post.component.html',
+    styleUrls: ['./edit-post.component.css'],
+    imports: [
+        FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatInputModule, PostDataComponent
+    ]
 })
 export class EditPostComponent implements OnInit {
 

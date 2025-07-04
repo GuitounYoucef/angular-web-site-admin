@@ -11,18 +11,15 @@ import { MemberDialogComponent } from '../member-dialog/member-dialog.component'
 
 
 @Component({
-  selector: 'app-member-card',
-  templateUrl: './member-card.component.html',
-  styleUrls: ['./member-card.component.css'],
-  standalone: true,
-  imports: [FormsModule,
-            CommonModule,
-            MatCardModule,
-            MatButtonModule,
-            MatIconModule,
-
-
-          ],
+    selector: 'app-member-card',
+    templateUrl: './member-card.component.html',
+    styleUrls: ['./member-card.component.css'],
+    imports: [FormsModule,
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+    ]
 })
 export class MemberCardComponent implements OnInit {
 

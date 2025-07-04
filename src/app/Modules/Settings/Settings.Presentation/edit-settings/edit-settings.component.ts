@@ -21,25 +21,24 @@ import { SettingsViewModels } from '../Settings.ViewModels/SettingsViewModels';
 import { Company } from '../../Settings.Domain/Settings.Models/company';
 
 @Component({
-  selector: 'app-edit-settings',
-  templateUrl: './edit-settings.component.html',
-  styleUrls: ['./edit-settings.component.css'],
-  standalone:true,
-  imports:[FormsModule,
-           ReactiveFormsModule,
-           CommonModule,
-           NgFor,
-           MatFormFieldModule,
-           MatIconModule,
-           MatButtonModule,
-           MatInputModule,
-           MatSelectModule,
-           MatTableModule,
-           MatPaginatorModule,
-           CompanySettingsComponent,
-           FontSettingsComponent,
-           CategorieSettingsComponent
-          ]
+    selector: 'app-edit-settings',
+    templateUrl: './edit-settings.component.html',
+    styleUrls: ['./edit-settings.component.css'],
+    imports: [FormsModule,
+        ReactiveFormsModule,
+        CommonModule,
+        NgFor,
+        MatFormFieldModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTableModule,
+        MatPaginatorModule,
+        CompanySettingsComponent,
+        FontSettingsComponent,
+        CategorieSettingsComponent
+    ]
 })
 export class EditSettingsComponent implements OnInit {
 

@@ -21,13 +21,12 @@ import { PostsViewModel } from '../Posts.ViewModels/PostsViewModel';
 
 
 @Component({
-  selector: 'app-add-post',
-  templateUrl: './add-post.component.html',
-  styleUrls: ['./add-post.component.css'],
-  standalone: true,
-  imports: [
-  FormsModule,ReactiveFormsModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatInputModule,PostDataComponent],
-    
+    selector: 'app-add-post',
+    templateUrl: './add-post.component.html',
+    styleUrls: ['./add-post.component.css'],
+    imports: [
+        FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatInputModule, PostDataComponent
+    ]
 })
 
 export class AddPostComponent implements OnInit {

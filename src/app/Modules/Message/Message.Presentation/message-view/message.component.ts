@@ -12,17 +12,16 @@ import { SocketService } from 'src/app/Modules/Core/Services/socket/socketServic
 import { Contact, ContactDetail, Message } from '../../Message.Domain/Message.Models/Message';
 
 @Component({
-  selector: 'message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css'],
-  standalone: true,
-  imports: [CommonModule,
-    RouterOutlet,
-    MessageContactDetailComponent,
-    MessageHeaderComponent,
-    MessageContactsListComponent,
-    MessageChatListComponent,
-  ]
+    selector: 'message',
+    templateUrl: './message.component.html',
+    styleUrls: ['./message.component.css'],
+    imports: [CommonModule,
+        RouterOutlet,
+        MessageContactDetailComponent,
+        MessageHeaderComponent,
+        MessageContactsListComponent,
+        MessageChatListComponent,
+    ]
 })
 
 export class MessageComponent implements OnInit {

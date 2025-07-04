@@ -5,14 +5,13 @@ import { AvatarModule } from 'ngx-avatars';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-message-contact-detail',
-  templateUrl: './message-contact-detail.component.html',
-  styleUrls: ['./message-contact-detail.component.css'],
-  standalone:true,
-  imports: [
-            AvatarModule,
-            CommonModule,
-  ]
+    selector: 'app-message-contact-detail',
+    templateUrl: './message-contact-detail.component.html',
+    styleUrls: ['./message-contact-detail.component.css'],
+    imports: [
+        AvatarModule,
+        CommonModule,
+    ]
 })
 export class MessageContactDetailComponent implements OnInit {
 

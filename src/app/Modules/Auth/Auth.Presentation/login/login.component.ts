@@ -12,15 +12,14 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  standalone: true,
-  imports: [
-  FormsModule,
-  CommonModule,
-  ReactiveFormsModule,MatIconModule, MatButtonModule, MatInputModule, MatProgressBarModule
-],
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    imports: [
+        FormsModule,
+        CommonModule,
+        ReactiveFormsModule, MatIconModule, MatButtonModule, MatInputModule, MatProgressBarModule
+    ]
 })
 export class LoginComponent implements OnInit {
 

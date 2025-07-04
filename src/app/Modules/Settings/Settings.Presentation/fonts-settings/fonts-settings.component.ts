@@ -10,21 +10,19 @@ import { FontSettings } from '../../Settings.Domain/Settings.Models/Settings';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-fonts-settings',
-  templateUrl: './fonts-settings.component.html',
-  styleUrls: ['./fonts-settings.component.css'],
-  standalone:true,
-  imports:[FormsModule,
-           ReactiveFormsModule,
-           CommonModule,
-           NgFor,
-           MatFormFieldModule,
-           MatIconModule,
-           MatButtonModule,
-           MatInputModule,
-           MatSelectModule,
-
-          ]
+    selector: 'app-fonts-settings',
+    templateUrl: './fonts-settings.component.html',
+    styleUrls: ['./fonts-settings.component.css'],
+    imports: [FormsModule,
+        ReactiveFormsModule,
+        CommonModule,
+        NgFor,
+        MatFormFieldModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatSelectModule,
+    ]
 })
 export class FontSettingsComponent implements OnInit {
 
