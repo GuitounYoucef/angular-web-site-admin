@@ -1,0 +1,29 @@
+<div class="bg-slate-200  h-full bg-fixed p-10 ">
+  <div class="header py-3 text-2xl font-semibold ">
+    <p>Website Statistics</p>
+  </div>
+  <div class="flex flex-wrap gap-8  flex-row py-3">
+
+
+
+
+  </div>
+  <div class="flex flex-wrap gap-8  flex-row">
+
+    <app-stat-card
+     [statTitle]="'Web Site Viste'"
+     [TitleBgColor]="'bg-green-600'"
+     [count]="(visiteNumber$ | async)!.websiteViste"
+     
+    ></app-stat-card>
+
+    <app-stat-card
+    [statTitle]="'Readed Posts'"
+    [TitleBgColor]="'bg-blue-500'"
+    [count]="(visiteNumber$ | async)!.postViste"
+    ></app-stat-card>
+
+
+  </div>
+
+</div>

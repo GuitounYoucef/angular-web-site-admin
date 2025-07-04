@@ -1,0 +1,22 @@
+<div class="w-full p-4 h-fit    top-0 bg-slate-200 grid grid-cols-2 gap-3">
+  <app-company-settings 
+  class="col-span-2"
+  (updateCompanyEvent)="updateCompany($event)"
+  [Company]="CompanySettings$" >
+
+  </app-company-settings>
+
+  <app-categories-settings class="col-span-1"
+     
+      [postCategories]="PostCategorieList$">
+  </app-categories-settings>
+
+  <app-fonts-settings class="col-span-1" 
+  (updateFontSettingsEvent)="updateFontSettings($event)"
+    [FontSettings]="fontSettings$">
+  </app-fonts-settings>
+
+
+
+
+</div>

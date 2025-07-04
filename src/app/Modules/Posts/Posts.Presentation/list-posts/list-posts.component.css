@@ -1,0 +1,21 @@
+button{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+mat-grid-list{
+    margin: 20px;
+}
+
+.grid{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+
+}
+
+.wrapper{
+    min-height: 100vh;
+}

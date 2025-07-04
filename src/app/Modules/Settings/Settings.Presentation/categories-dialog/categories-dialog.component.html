@@ -1,0 +1,28 @@
+<form [formGroup]="categoriesForm" (ngSubmit)="categoriesAction()">
+  <div class="bg-gray-800 text-white">
+    <h1 class="p-6">Categories</h1>
+</div>
+  <div class="w-96 p-8" >
+
+
+      <div class="flex flex-col px-4">
+
+          <mat-form-field appearance="outline" class="w-full ">
+              <mat-label>Categorie Name</mat-label>
+              <input formControlName="categName" matInput required autocomplete="off">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="w-full">
+            <mat-label>Categorie Label</mat-label>
+              <input formControlName="categLabel" matInput required autocomplete="off">
+          </mat-form-field>            
+
+      </div>
+
+  </div>
+  <div class="bg-gray-200 text-white  flex gap-4 py-8 px-12 justify-center">
+    <button type="submit" mat-raised-button color="primary" class="bg-gray-700 text-white" 
+        style="width: 120px;">{{buttonCaption}}<mat-icon>{{buttonicon}}</mat-icon></button>
+    <button mat-raised-button color="warn" (click)="closeForm()" style="width: 120px;">Cancel<mat-icon>cancel</mat-icon></button>
+</div>
+</form>

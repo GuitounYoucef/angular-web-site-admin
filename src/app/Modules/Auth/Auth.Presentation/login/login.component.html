@@ -1,0 +1,41 @@
+<div class="bod">
+
+  <div class="login-box login overflow-hidden">
+    <div class="p-8">
+      <h2>تسجيل الدخول </h2>
+
+      <form class="" [formGroup]="loginform" [dir]="direction">
+
+        <div mat-dialog-content>
+
+          <mat-form-field color="accent">
+            <input matInput type="text" placeholder="إسم المستخدم" formControlName="username">
+          </mat-form-field>
+
+
+          <mat-form-field>
+            <input matInput type="password" placeholder="كلمة المرور " formControlName="password">
+          </mat-form-field>
+
+
+
+        </div>
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button (click)="onSubmit()">
+
+          دخــول
+        </button>
+
+      </form>
+    </div>
+    <mat-progress-bar *ngIf="Loading$ | async" mode="query" color="accent"></mat-progress-bar>
+  </div>
+
+
+
+</div>
+<!-- <ngx-spinner type="ball-scale-multiple"></ngx-spinner> -->

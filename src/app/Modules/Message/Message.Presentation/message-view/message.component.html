@@ -1,0 +1,35 @@
+<div class="flex flex-col container mx-4 shadow-lg rounded-lg w-full h-full">
+    <!-- headaer -->
+    <app-message-header></app-message-header>
+    <!-- end header -->
+    <!-- Chatting -->
+    <div class="flex flex-row justify-between bg-white">
+        <!-- chat list -->
+        <div class="flex flex-col w-2/5 border-r-2 overflow-y-auto">
+            <app-message-contacts-list
+            [contactList]="contactsList$"
+            (getContactMessagesEvent)="getContactMessages($event)"
+            >
+            </app-message-contacts-list>
+        </div>
+        <!-- end user list -->
+
+        <!-- message -->
+        <div class="w-full px-2 flex flex-col justify-between ">
+            <app-message-chat-list
+   
+            (sendMessageEvent)="sendmessage($event)"
+            (nextPageEvent)="getNextPage()"
+            >
+            </app-message-chat-list>
+        </div>
+        <!-- end message -->
+        <div class="w-2/5 border-l-2 px-5 h-full">
+            <app-message-contact-detail 
+            [contactDetail]="contactDetail"
+            ></app-message-contact-detail>
+        </div>
+
+    </div>
+
+</div>

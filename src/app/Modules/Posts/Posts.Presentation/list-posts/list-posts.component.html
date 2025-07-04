@@ -1,0 +1,33 @@
+<div *ngIf="!deleted" class="bg-slate-200 h-screen  p-10 wrapper">
+<button mat-fab extended color="primary" routerLink="add">
+    <mat-icon>add</mat-icon>
+    Create Post
+  </button>
+  <div class="flex flex-wrap gap-8 m-8 flex-row" *ngIf="postList$ as postList">  
+       <app-post-card *ngFor="let item of postList | async"
+       [post]="item"
+       [textAlign]="(settings$ | async)!.textAlign"
+       [fontSizeTitle]="(settings$ | async)!.fontSizeTitle"
+       [fontSizeParagraph]="(settings$ | async)!.fontSizeParagraph"
+       [fontFamily]="(settings$ | async)!.fontFamily"
+       [deleted]="false"
+
+       >
+       </app-post-card>
+  </div>
+</div>
+
+<div *ngIf="deleted" class="bg-red-100 h-fit p-10 wrapper">
+
+    <div class="flex flex-wrap gap-8 m-8 flex-row" *ngIf="deletedPostList$ as deletedPostList">    
+         <app-post-card *ngFor="let item of deletedPostList | async"
+         [post]="item"
+         [textAlign]="(settings$ | async)!.textAlign"
+         [fontSizeTitle]="(settings$ | async)!.fontSizeTitle"
+         [fontSizeParagraph]="(settings$ | async)!.fontSizeParagraph"
+         [fontFamily]="(settings$ | async)!.fontFamily"
+         [deleted]="true"
+         >
+         </app-post-card>
+    </div>
+  </div>

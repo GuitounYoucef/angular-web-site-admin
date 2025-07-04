@@ -1,0 +1,83 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+  <div class="w-full flex p-4 px-12 h-fit top-0 bg-slate-200  gap-2 ">
+    <!------------------------------------------------------------------------------------------------------------->
+    <div class="container p-4  bg-white border rounded-lg drop-shadow-xl flex-none w-9/12 h-screen">
+      <div class="header py-2 text-2xl font-semibold ">
+        <p>{{formCaption}}</p>
+      </div>
+      <div class="dialog " [dir]="(settings$ | async)?.textAlign==='right'?  'rtl':'ltr' ">
+        <div class="body flex flex-col">
+          <div class="form-group ">
+            <ckeditor class="container my-4 h-full" [editor]="Editor" [config]="ckconfig" formControlName="statement">
+            </ckeditor>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------->
+    <div class="container p-4  bg-white border rounded-lg drop-shadow-xl flex-none w-3/12  flex flex-col ">
+      <div mat-dialog-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input formControlName="title" matInput required [style.text-align]="(settings$ | async)!.textAlign"
+            [style.font-family]="(settings$ | async)!.fontFamily"
+            [style.font-size]="(settings$ | async)!.fontSizeTitle">
+          >
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Post Categorie</mat-label>
+        <mat-select formControlName="postCategorie" name="postCategorie">
+          <mat-option *ngFor="let item of postCategories$ | async"
+            [value]="item.categName">{{item.categName}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="form-group">
+        <label class="form-label" for="customFile">Main Image</label>
+        <input type="file" class="form-control" id="customFile" (change)="OnFileSelected($event)" accept="image/*" />
+      </div>
+
+      <div class="form-group">
+        <img #myImage class="w-full py-4">
+      </div>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Card Content</mat-label>
+        <textarea formControlName="cardContent" matInput style="height:140px;"
+          [style.text-align]="(settings$ | async)!.textAlign" [style.font-family]="(settings$ | async)!.fontFamily"
+          [style.font-size]="(settings$ | async)!.fontSizeParagraph">
+        ></textarea>
+
+      </mat-form-field>
+      <p>
+        Comments :
+        <mat-button-toggle-group formControlName="commentStatus" aria-label="Font Style">
+          <mat-button-toggle [value]=true>Enable</mat-button-toggle>
+          <mat-button-toggle [value]=false>Disable</mat-button-toggle>
+        </mat-button-toggle-group>
+      </p>
+
+      <p *ngIf="(curentUser$ | async)!.role==='ROLE_ADMIN'" >
+        Valid :
+        <mat-button-toggle-group formControlName="valid" aria-label="Font Style">
+          <mat-button-toggle [value]=true>Yes</mat-button-toggle>
+          <mat-button-toggle [value]=false>No</mat-button-toggle>
+        </mat-button-toggle-group>
+      </p>
+
+
+
+      <div class="flex">
+        <button type="submit" mat-raised-button class="bg-success text-white" style="width: 120px;">{{buttonCaption}}
+          <mat-icon>{{buttonicon}}</mat-icon>
+        </button>
+        <button mat-raised-button color="warn" style="width: 120px;">Close<mat-icon>cancel
+          </mat-icon></button>
+      </div>
+
+    </div>
+    <!------------------------------------------------------------------------------------------------------------->
+  </div>
+</form>

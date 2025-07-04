@@ -1,0 +1,23 @@
+.list-itm:hover
+{
+    cursor: pointer;
+    background-color: rgb(179, 179, 179);
+    transition: background-color 0.4s ease;
+  }
+
+  .list-itm.active
+  {
+    
+    background-color: rgb(161, 187, 221) !important;
+    transition: background-color 0.4s ease-out;
+  }
+
+  mat-list-item{
+    display: flex;
+  }
+
+  .list-itm *{
+    background: rgba(0, 0, 0, 0)
+  }
+
+

@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ 
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ck-editor__editable_inline {
+    min-height: 500px;
+}
+
+@font-face {
+    font-family: CairoFont;
+    src: url(assets/font/Cairo-VariableFont_wght.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: CairoRegular;
+    src: url(assets/font/Cairo-Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: CairoBold;
+    src: url(assets/font/Cairo-Bold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: CairoBlack;
+    src: url(assets/font/Cairo-Black.ttf) format("truetype");
+  }
+
+  mat-form-field, mat-select, mat-label, th, td,button, mat-option, .bar_label{
+    font-size: 14px;
+    font-family: 'CairoBold', sans-serif; 
+  }
+
+  span,.mat-mdc-snack-bar-container .mdc-snackbar__label {
+    font-family: 'CairoBold', sans-serif !important;
+   
+  }
+
+  .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    background-color: #141e30 !important;
+    box-shadow: 0 0 15px #03e8f446,
+    0 0 15px #03e8f446,
+    0 0 15px #03e8f446,
+    0 0 15px #03e8f446 !important;
+}
+
+.green-snackbar {
+    background: rgb(65, 252, 134);
+    color: white;
+}
+.green-snackbar button {
+    background-color: rgb(65, 252, 134);
+    color: white;
+    border: none;
+    padding: 0px 10px 0px 10px;
+}
+.red-snackbar {
+    background: #F44336;
+    color: white;
+    border-radius: 15px;
+    direction: rtl;
+
+}
+.red-snackbar button {
+    background-color: #F44336;
+    color: white !important;
+    border: none;
+    margin: 10px 20px 10px 20px;
+    padding: 0px 15px 0px 15px;
+}
+

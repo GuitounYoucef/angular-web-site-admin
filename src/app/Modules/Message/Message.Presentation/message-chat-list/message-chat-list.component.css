@@ -1,0 +1,7 @@
+.list{
+    height: 90vh;
+}
+
+::ng-deep .cdk-virtual-scroll-content-wrapper {
+    max-width: 100% !important;
+  }

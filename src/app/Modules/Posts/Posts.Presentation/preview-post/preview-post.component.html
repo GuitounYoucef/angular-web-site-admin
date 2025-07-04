@@ -1,0 +1,10 @@
+<div class="w-full flex justify-center top-0 bg-slate-200 " [dir]="'rtl'">
+  <div class="container mx-auto max-w-screen-lg px-12 pb-32 bg-white border rounded-lg drop-shadow-xl" >
+     <p class="title pt-16 pb-8 text-3xl font-extrabold" 
+     [style.text-align]="(settings$ | async)!.textAlign"
+     [style.font-family]="(settings$ | async)!.fontFamily">
+     {{post.title}}</p>
+     <img [src]="post.imageLink" class="w-full" alt="..."> 
+     <div class="statement text-justify" [style.text-align]="(settings$ | async)!.textAlign" ></div>
+  </div>
+</div>

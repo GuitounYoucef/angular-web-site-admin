@@ -1,0 +1,36 @@
+<div class="flex flex-col list">
+  <cdk-virtual-scroll-viewport
+  class="h-full scroll-on-hover"
+  #scroll
+
+  [itemSize]="68"
+  style="max-width: 100%"
+>
+  <div class="flex flex-col gap-1 pt-2   h-5/6"  >
+    <mat-spinner *ngIf="loadingState$ | async" class="w-full m-auto"></mat-spinner>
+    <div *ngFor="let message of messagesList$ | async" [ngClass]="message.type ==2 ? 
+    'justify-end' :
+    'justify-start'" class="flex mb-4 ">
+      <ngx-avatars *ngIf="message.type==1" name="My Blog" size="40"></ngx-avatars>
+      <div [ngClass]="message.type ==2 ? 
+      'mr-2 py-3 px-4 bg-gray-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white' :
+      'ml-2 py-3 px-4 bg-blue-400 rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white'">
+        {{message.content}}
+      </div>
+      <ngx-avatars *ngIf="message.type==2" [name]="message.contactName" size="40"></ngx-avatars>
+
+    </div>
+
+  </div>
+
+  </cdk-virtual-scroll-viewport>
+  <div class=" p-4 h-1/6 flex items-end gap-2">
+    <textarea [(ngModel)]="message" class=" w-full bg-gray-300 py-5 px-3 rounded-xl h-full" type="text" placeholder="type your message here..."></textarea>
+    <button (click)="sendMessage()"
+    class="mr-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    Send&nbsp;&nbsp;
+    <mat-icon mat-list-icon>send</mat-icon>
+    
+  </button>
+  </div>
+</div>

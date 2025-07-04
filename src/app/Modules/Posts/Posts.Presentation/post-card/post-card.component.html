@@ -1,0 +1,46 @@
+<div class="w-96  bg-white border border-gray-200 rounded-lg shadow-xl ">
+  <a href="#">
+    <img class="rounded-t-lg max-h-60 min-w-full" [src]="post.imageLink" alt="" />
+  </a>
+  <div class="p-5 card-body">
+    <div class="card-title">
+
+      <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900" [style.text-align]="textAlign"
+        [style.font-family]="fontFamily" [style.font-size]="fontSizeTitle+'px'">
+
+        {{post.title}}</p>
+
+    </div>
+    <div class="card-content">
+      <p class=" font-normal text-gray-700 text-base" [style.text-align]="textAlign"
+        [style.font-family]="fontFamily" [style.font-size]="fontSizeParagraph+'px'">
+        {{post.cardContent}}</p>
+    </div>
+    
+    <div class="flex">
+    <button (click)="previewPost(post.id!)"
+      class="mr-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+      Preview&nbsp;&nbsp;
+      <mat-icon mat-list-icon>visibility</mat-icon>
+    </button>
+    <div *ngIf="(curentUser$ | async)!.role==='ROLE_ADMIN' || !post.valid" class="flex">
+      <button (click)="editPost(post.id!)"
+        class="mr-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+        Edit&nbsp;&nbsp;
+        <mat-icon mat-list-icon>edit</mat-icon>
+      </button>
+      <button *ngIf="!deleted" (click)="deletePost(post.id!)"
+        class="mr-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+        Delete&nbsp;&nbsp;
+        <mat-icon mat-list-icon>delete</mat-icon>
+      </button>
+
+      <button *ngIf="deleted" (click)="restorePost(post.id!)"
+        class="mr-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-500 rounded-lg hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+        Restore&nbsp;&nbsp;
+        <mat-icon mat-list-icon>restore</mat-icon>
+      </button>
+    </div>
+  </div>
+  </div>
+</div>

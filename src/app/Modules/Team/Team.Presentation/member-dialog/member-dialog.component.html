@@ -1,0 +1,70 @@
+<form [formGroup]="memberForm" (ngSubmit)="userAction()">
+  <div class="bg-gray-800 text-white">
+    <h1 class="p-6">{{formCaption}}</h1>
+  </div>
+  <div class="w-96 p-8">
+
+    <div class="flex gap-4 px-4">
+      <div>
+        <mat-form-field appearance="outline" class="w-full ">
+          <mat-label>Name</mat-label>
+          <input formControlName="memeberName" matInput required autocomplete="off">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full ">
+          <mat-label>Job</mat-label>
+          <input formControlName="memeberJob" matInput required autocomplete="off">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-label>Level</mat-label>
+          <mat-select formControlName="memeberLevel" required>
+            <mat-option value="1">President</mat-option>
+            <mat-option value="2">Vise President</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full ">
+          <mat-label>Description</mat-label>
+          <input formControlName="memeberDescription" matInput required autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="w-full ">
+          <mat-label>Facebook</mat-label>
+          <input formControlName="memeberFacebook" matInput required autocomplete="off">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full ">
+          <mat-label>Linkedin</mat-label>
+          <input formControlName="memeberLinkedin" matInput required autocomplete="off">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full ">
+          <mat-label>Twitter</mat-label>
+          <input formControlName="memeberTwitter" matInput required autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="w-72 flex flex-col items-center">
+        <div class="p-2">
+          <img #profileImage class="w-64 h-64 rounded-full"  alt="" />
+        </div>
+
+        
+
+        <div class="form-group">
+          <label class="form-label" for="customFile">profil Image</label>
+          <input type="file" class="form-control" id="customFile" (change)="OnFileSelected($event)" accept="image/*" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="bg-gray-200 text-white  flex gap-4 py-8 px-12 justify-center">
+    <button type="submit" mat-raised-button color="primary" class="bg-gray-700 text-white"
+      style="width: 120px;">{{buttonCaption}}<mat-icon>{{buttonicon}}</mat-icon></button>
+    <button mat-raised-button color="warn" (click)="closeForm()"
+      style="width: 120px;">Cancel<mat-icon>cancel</mat-icon></button>
+  </div>
+</form>

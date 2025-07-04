@@ -1,0 +1,75 @@
+<div class="relative  h-full  p-4 bg-white border rounded-lg drop-shadow-xl">
+
+  <form [formGroup]="companyForm">
+    <div class="dialog mb-12">
+      <div class="header py-2 text-2xl font-semibold ">
+        <p>Company informations</p>
+      </div>
+      <div class="body grid grid-cols-4 gap-2">
+
+        <mat-form-field class="col-span-2">
+          <mat-label>Company Name</mat-label>
+          <input matInput placeholder="" value="" formControlName="companyName">
+        </mat-form-field>
+        <div class="col-span-2 row-span-5">
+          <div id="map" class="mx-auto h-full w-full"></div>
+
+        </div>
+
+        <mat-form-field>
+          <mat-label>address</mat-label>
+          <input matInput placeholder="" value="" formControlName="address">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>email</mat-label>
+          <input matInput placeholder="" value="" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>phone1</mat-label>
+          <input matInput placeholder="" value="" formControlName="phone1">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>phone2</mat-label>
+          <input matInput placeholder="" value="" formControlName="phone2">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Youtube Link</mat-label>
+          <input matInput placeholder="" value="" formControlName="youtubeLink">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>facebook Link</mat-label>
+          <input matInput placeholder="" value="" formControlName="facebookLink">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Map Longitude</mat-label>
+          <input matInput placeholder="" value="" formControlName="mapLongitude">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <mat-label>Map Latitude</mat-label>
+          <input matInput placeholder="" value="" formControlName="mapLatitude">
+        </mat-form-field>
+
+
+
+
+      </div>
+
+    </div>
+  </form>
+  <button (click)="updateCompany()" [disabled]="!companyForm.dirty"
+    [ngClass]="!companyForm.dirty ? 
+               'bg-gray-500 rounded-lg' 
+               : 'bg-green-700 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' " class=" inline-flex  px-4 py-2 text-sm font-medium text-center text-white 
+          absolute bottom-0 right-4 my-4 ">
+    Save&nbsp;&nbsp;
+    <mat-icon mat-list-icon>save</mat-icon>
+  </button>
+</div>

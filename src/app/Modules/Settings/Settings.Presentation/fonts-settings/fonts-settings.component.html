@@ -1,0 +1,67 @@
+<div class="container  max-h-full  p-4 bg-white border rounded-lg drop-shadow-xl">
+
+  <form [formGroup]="fontSettingsForm">
+    <div class="dialog mb-8">
+      <div class="header py-2 text-2xl font-semibold ">
+        <p>Fonts Settings</p>
+      </div>
+      <div class="body grid grid-cols-1">
+        <mat-form-field>
+          <mat-label>Font Family</mat-label>
+          <mat-select formControlName="fontFamily">
+            <mat-option *ngFor="let item of fontList" [value]="item">{{item}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Text Align</mat-label>
+          <mat-select formControlName="textAlign" name="textAlign">
+            <mat-option [value]="'left'">left</mat-option>
+            <mat-option [value]="'right'">right</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Titles Font Size</mat-label>
+          <mat-select formControlName="fontSizeTitle" name="fontSizeTitle">
+            <mat-option [value]=18>18</mat-option>
+            <mat-option [value]=22>22</mat-option>
+            <mat-option [value]=24>24</mat-option>
+            <mat-option [value]=26>26</mat-option>
+            <mat-option [value]=28>28</mat-option>
+            <mat-option [value]=30>30</mat-option>
+            <mat-option [value]=32>32</mat-option>
+            <mat-option [value]=34>34</mat-option>
+            <mat-option [value]=36>36</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Paragraphs Font Size</mat-label>
+          <mat-select formControlName="fontSizeParagraph" name="fontSizeParagraph">
+            <mat-option [value]=14>14</mat-option>
+            <mat-option [value]=16>16</mat-option>
+            <mat-option [value]=18>18</mat-option>
+            <mat-option [value]=22>22</mat-option>
+            <mat-option [value]=24>24</mat-option>
+            <mat-option [value]=26>26</mat-option>
+            <mat-option [value]=28>28</mat-option>
+            <mat-option [value]=30>30</mat-option>
+            <mat-option [value]=32>32</mat-option>
+            <mat-option [value]=34>34</mat-option>
+            <mat-option [value]=36>36</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+  </form>
+  <button (click)="updateFont()" [disabled]="!fontSettingsForm.dirty"
+    [ngClass]="!fontSettingsForm.dirty ? 
+               'bg-gray-500 rounded-lg' 
+               : 'bg-green-700 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' " class=" inline-flex  px-4 py-2 text-sm font-medium text-center text-white 
+          absolute bottom-0 right-4 my-4 ">
+    Save&nbsp;&nbsp;
+    <mat-icon mat-list-icon>save</mat-icon>
+  </button>
+</div>

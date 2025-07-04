@@ -1,0 +1,25 @@
+<div *ngIf="!deleted" class="bg-slate-200 h-screen  p-10 wrapper">
+
+  <div class="header py-2 text-2xl font-semibold ">
+    <p>Company Team</p>
+  </div>
+
+  <button  (click)="addTeamMember()" class=" inline-flex  p-3 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-600 focus:ring-4 
+  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 my-4">
+      New Member&nbsp;&nbsp;
+      <mat-icon>add_circle</mat-icon>
+  </button>
+    <div class="flex flex-wrap gap-8 flex-row" *ngIf="teamList$ as teamList">  
+         <app-member-card *ngFor="let item of teamList | async"
+         (deleteMemeberEvent)="deleteMember($event)"
+         (restoreMemeberEvent)="restoreMember($event)"
+         [teamMember]="item"
+         [textAlign]="(settings$ | async)!.textAlign"
+         [fontSizeTitle]="(settings$ | async)!.fontSizeTitle"
+         [fontSizeParagraph]="(settings$ | async)!.fontSizeParagraph"
+         [fontFamily]="(settings$ | async)!.fontFamily"
+         [deleted]="false"
+         >
+         </app-member-card>
+    </div>
+  </div>
